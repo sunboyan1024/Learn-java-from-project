@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+
+<div>hello</div>
+
+<ul>
+    <li th:each="book:${bookList}">
+        <a th:href="@{'/detail?id=' + ${book.id}}" th:text="${book.name}"></a>
+    </li>
+</ul>
+</body>
+
+</html>
